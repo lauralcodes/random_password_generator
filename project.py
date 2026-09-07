@@ -92,78 +92,7 @@ def design_pw():
 
 
 
-
 design_pw()
-
-
-
-
-# def main():
-#     # Get valid password length
-#     while True:
-#         try:
-#             pw_length = int(input("Enter the length of the password (8-128): ").strip())
-#         except ValueError:
-#             print("Please enter a valid number.")
-#             continue
-#         if 8 <= pw_length <= 128:
-#             break
-#         print("Invalid password! length should be between 8 and 128.")
-
-#     # Ask which character types to include
-#     while True:
-#         include_uppercase = ask_yes("Do you want to include upper case letters?")
-#         include_lowercase = ask_yes("Do you want to include lower case letters?")
-#         include_sp_characters = ask_yes("Do you want to include special characters?")
-#         include_digits = ask_yes("Do you want to include digits?")
-
-#         if not (include_uppercase or include_lowercase or include_sp_characters or include_digits):
-#             print("Select at least one character type.")
-#             continue
-#         # ensure length can accommodate at least one of each selected type
-#         selected_count = sum([include_uppercase, include_lowercase, include_sp_characters, include_digits])
-#         if pw_length < selected_count:
-#             print(f"Password length must be at least {selected_count} for the selected character types.")
-#             # ask for length again
-#             while True:
-#                 try:
-#                     pw_length = int(input(f"Enter a new length (>= {selected_count}): ").strip())
-#                 except ValueError:
-#                     print("Please enter a valid number.")
-#                     continue
-#                 if pw_length >= selected_count and 8 <= pw_length <= 128:
-#                     break
-#                 print("Invalid length.")
-#         break
-
-#     pools = []
-#     required_chars = []
-#     if include_lowercase:
-#         pools.append(string.ascii_lowercase)
-#         required_chars.append(random.choice(string.ascii_lowercase))
-#     if include_uppercase:
-#         pools.append(string.ascii_uppercase)
-#         required_chars.append(random.choice(string.ascii_uppercase))
-#     if include_digits:
-#         pools.append(string.digits)
-#         required_chars.append(random.choice(string.digits))
-#     if include_sp_characters:
-#         # Common punctuation characters for passwords
-#         pools.append(string.punctuation)
-#         required_chars.append(random.choice(string.punctuation))
-
-#     available_chars = "".join(pools)
-
-#     remaining_len = pw_length - len(required_chars)
-#     password_chars = required_chars + [random.choice(available_chars) for _ in range(remaining_len)]
-#     random.shuffle(password_chars)
-#     password = "".join(password_chars)
-
-#     print("Generated password:", password)
-
-
-# if __name__ == "__main__":
-#     main()
 
 
 
