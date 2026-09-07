@@ -21,7 +21,7 @@ def design_pw():
    
     try:
         pw_length = int(input(" Enter the password length? ").strip())
-        if  pw_length < 8 or pw_length > 128:
+        if  pw_length < 8 or pw_length > 128: # validate the length
             print( "Password length should be between 8-128")
             #return pw_length
     except ValueError:
